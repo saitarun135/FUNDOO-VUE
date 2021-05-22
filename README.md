@@ -1,4 +1,4 @@
-                             # Fundoo-Notes 
+# Fundoo-Notes 
 
 ## Project setup
 ```
