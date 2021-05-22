@@ -1,5 +1,8 @@
 <template>
 <form @submit.prevent="handlesubmit">
+    <div v-if="error" class="alert alert-danger" role="alert">
+        {{error}}
+    </div>
     <h3>Sign In</h3>
 
     <div class="form-group">
@@ -32,11 +35,13 @@ export default {
     data() {
         return {
             email: '',
-            password: ''
+            password: '',
+            error:''
         }
     },
     methods: {
         async handlesubmit() {
+            try{
             const response = await axios.post('/login', {
                 email: this.email,
                 password: this.password
@@ -45,6 +50,9 @@ export default {
             // console.log(response)  displaying token on console
             localStorage.setItem('token', response.data.token); //locally storing token
             this.$router.push('/dash')
+        }catch(e){
+            this.error='Invalid username/password'
+        }
         }
     }
 }
