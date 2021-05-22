@@ -1,4 +1,4 @@
-# vue-fundoo
+# Fundoo-Notes 
 
 ## Project setup
 ```
