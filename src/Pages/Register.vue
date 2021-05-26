@@ -33,6 +33,7 @@
 
         </div>
      
+
         <div class="pass">
             <input :type="password_type" class="password" v-model="password" id="pass1" required>
             <label>Password</label>
@@ -64,7 +65,7 @@ import VueAxios from 'vue-axios'
 import {
     required,
     minLength,
-    maxLength,email
+    maxLength,
 } from 'vuelidate/lib/validators'
 
 Vue.use(VueAxios, axios)
@@ -108,7 +109,7 @@ export default {
             });
             alert("user registered successfully..!")
             // console.log(response);
-            this.$router.push('/');
+            this.$router.push('/login');
         }
     }
 }
