@@ -3,18 +3,18 @@
     <h3>Reset Password</h3>
 
     <div class="form-group">
-        <input type="email" class="form-control" v-model="email" />
-        <label>Email</label>
+       
+        <input type="email" class="form-control" v-model="email" placeholder="Enter your email" />
+       
     </div>
 
     <div class="form-group">
-        <input type="password" class="form-control" v-model="password" />
-        <label>Password</label>
+        <input type="password" class="form-control" v-model="password" placeholder="password" />
     </div>
 
     <div class="form-group">
-        <input type="password" class="form-control" v-model="password_confirmation" />
-        <label>password confirm</label>
+        <input type="password" class="form-control" v-model="password_confirmation" placeholder="confirm_password"/>
+ 
     </div>
     <button type="submit" class="btn btn-primary btn-block">submit</button>
 </form>
@@ -39,11 +39,13 @@ export default {
                 password_confirmation: this.password_confirmation,
                 resetToken: this.$route.params.resetToken
             });
-            alert("successfully changed..");
+            alert("successfully updated.");
             console.log(response);
-            this.$router.push('/');
+            this.$router.push('/login');
         }
 
     }
 }
 </script>
+<style scoped src="../assets/CSS/Reset.css">
+</style>
