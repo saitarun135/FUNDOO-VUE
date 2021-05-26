@@ -10,14 +10,14 @@
 
     <input type="password" name="Password" v-model="password" placeholder="Password" />
 
-    <!-- <button type="button">Sign in</button> -->
+
     <button class="btn btn-primary btn-block">Sign In</button>
 
     <a href="http://localhost:3000/register">Create account</a>
     <div class="fp">
         <a href="http://localhost:3000/forgot">forgot password</a>
     </div>
-    <!-- </div> -->
+  
 </form>
 </template>
 
