@@ -9,6 +9,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 import router from './router'
 import './axios'
+
+// import ('./src/Styles/Forget.css')
 Vue.config.productionTip = false
 //vuelidate
 Vue.use(vuelidate)
