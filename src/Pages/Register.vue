@@ -11,7 +11,7 @@
             <input type="name" required>
             <label>First name</label>
         </div>
-       
+
         <div class="name">
             <input type="name" required v-model.trim="$v.name.$model" :class="{
                 'is-invalid':$v.name.$error,'is-valid':!$v.name.$invalid}">
@@ -30,10 +30,9 @@
         <div class="user-name">
             <input type="username" v-model="email" value="@gmail.com" required>
             <label>Username</label>
-            <!-- <span class="gmail">@gmail.com</span> -->
+
         </div>
-        <!-- <a class="line1">You can use letters, numbers & periods</a> -->
-        <!-- <a href="" class="line2">Use my current email address instead</a> -->
+     
         <div class="pass">
             <input :type="password_type" class="password" v-model="password" id="pass1" required>
             <label>Password</label>
@@ -47,7 +46,7 @@
             <img src="https://icon-library.com/images/show-hide-icon/show-hide-icon-28.jpg" @click="togglePassword()" class="fadeIn fourth" id="eye">
         </div>
         <a class="line3">Use 6 or more characters with a mix of letters, numbers & symbols</a>
-        <a href=" http://localhost:3000/" class="line4">Sign in instead</a>
+        <a href=" http://localhost:3000/login" class="line4">Sign in instead</a>
         <input type="submit" value="Next">
     </form>
     <div class="side-image">
@@ -61,12 +60,11 @@
 import Vue from 'vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
-// import useValidate from '@vuelidate/core'
-// import { reactive, computed } from 'vue'
+
 import {
     required,
     minLength,
-    maxLength
+    maxLength,email
 } from 'vuelidate/lib/validators'
 
 Vue.use(VueAxios, axios)
@@ -93,7 +91,6 @@ export default {
             minLength: minLength(3),
             maxLength: maxLength(10)
         },
-
     },
     methods: {
 
