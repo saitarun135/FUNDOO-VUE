@@ -3,33 +3,29 @@
     <form @submit.prevent="handlesubmit">
         <div class="head">
             <h2><span id="sp1">F</span><span id="sp2">u</span><span id="sp3">n</span>
-            <span id="sp4">d</span><span id="sp5">o</span><span id="sp6">o</span></h2>
+                <span id="sp4">d</span><span id="sp5">o</span><span id="sp6">o</span></h2>
             <!-- <img src="https://uspto.report/TM/88624243/mark" alt="" class="logo"> -->
             <h3>Create your Fundoo Account</h3>
         </div>
         <div class="name">
-            <input type="name" required >
+            <input type="name" required>
             <label>First name</label>
         </div>
-        <!-- <div class="name">
-            <input type="name" required v-model="name">
-            <label>Last name</label>
-        </div> -->
-     <div class="name">
+       
+        <div class="name">
             <input type="name" required v-model.trim="$v.name.$model" :class="{
                 'is-invalid':$v.name.$error,'is-valid':!$v.name.$invalid}">
-                <label>Last name</label>
-                <!-- <div class="valid-feedback">ur name is valid</div> -->
-                <div class="invalid-feedback">
-                    <div class="box">
-                    <span  id="val" v-if="!$v.name.required">Required field</span>
-                    <span  id="val" v-if="!$v.name.minLength">must have {{$v.name.$params.minLength.min}}letters </span>
-                    <span  id="val" v-if="!$v.name.maxLength">must have atmost {{$v.name.$params.maxLength.max}}letters</span>
-                    </div>
-                    </div>
-          
-        </div>
+            <label>Last name</label>
+            <!-- <div class="valid-feedback">ur name is valid</div> -->
+            <div class="invalid-feedback">
+                <div class="box">
+                    <span id="val" v-if="!$v.name.required">Required field</span>
+                    <span id="val" v-if="!$v.name.minLength">must have {{$v.name.$params.minLength.min}}letters </span>
+                    <span id="val" v-if="!$v.name.maxLength">must have atmost {{$v.name.$params.maxLength.max}}letters</span>
+                </div>
+            </div>
 
+        </div>
 
         <div class="user-name">
             <input type="username" v-model="email" value="@gmail.com" required>
@@ -44,7 +40,7 @@
         </div>
 
         <div class="pass">
-            <input :type="password_type" class="password" v-model="password_confirmation" id="pass2" required >
+            <input :type="password_type" class="password" v-model="password_confirmation" id="pass2" required>
             <label>Confirm</label>
         </div>
         <div class="iconeye">
@@ -52,7 +48,7 @@
         </div>
         <a class="line3">Use 6 or more characters with a mix of letters, numbers & symbols</a>
         <a href=" http://localhost:3000/" class="line4">Sign in instead</a>
-        <input type="submit"  value="Next" >
+        <input type="submit" value="Next">
     </form>
     <div class="side-image">
         <!-- https://ssl.gstatic.com/accounts/signup/glif/account.svg -->
@@ -67,19 +63,23 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 // import useValidate from '@vuelidate/core'
 // import { reactive, computed } from 'vue'
-import { required ,minLength,maxLength} from 'vuelidate/lib/validators'
+import {
+    required,
+    minLength,
+    maxLength
+} from 'vuelidate/lib/validators'
 
 Vue.use(VueAxios, axios)
 export default {
     name: 'Register',
-  
+
     data() {
         return {
-         
-              // lastname:'',
-             name: '',
-           email: '',
-           // email: '',
+
+            // lastname:'',
+            name: '',
+            email: '',
+            // email: '',
             password: '',
             password_confirmation: '',
             //calling password functionality
@@ -87,12 +87,16 @@ export default {
             password_toggle_element: "show",
         }
     },
-  validations:{
-      name:{required,minLength:minLength(3),maxLength:maxLength(10)},
+    validations: {
+        name: {
+            required,
+            minLength: minLength(3),
+            maxLength: maxLength(10)
+        },
 
-  },
+    },
     methods: {
-      
+
         togglePassword() {
             this.password_type = this.password_type === 'password' ? 'text' : 'password'
         },
