@@ -25,7 +25,6 @@ form {
     text-align: center;
     margin-bottom: -200px;
 }
-
 input {
     border-radius: 100px;
     padding: 10px 15px;
@@ -35,7 +34,6 @@ input {
     display: block;
     margin: 20px auto 20px auto;
 }
-
 button {
     border-radius: 100px;
     border: none;
