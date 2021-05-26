@@ -24,10 +24,7 @@ body{
     color:blueviolet;
 }
 input[type="email"],button[type="submit"]{
-    /* width:100%;
-    padding:10px 0px;
-    margin:5px 0px;
-    border:2px  solid #c0c0c0; */
+   
     width: 91%;
     padding: 10px 0px;
     margin: 5px 0px;
