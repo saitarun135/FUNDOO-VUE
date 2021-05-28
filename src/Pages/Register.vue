@@ -8,52 +8,45 @@
             <h3>Create your Fundoo Account</h3>
         </div>
         <div class="name">
-            <input type="name" required>
+            <input type="name" required pattern="[A-Za-z]{3,10}">
             <label>First name</label>
         </div>
 
         <div class="name">
-            <input type="name" required v-model.trim="$v.name.$model" :class="{
-                'is-invalid':$v.name.$error,'is-valid':!$v.name.$invalid}">
+            <input type="name" required v-model="name" pattern="[A-Za-z]{3,10}">
             <label>Last name</label>
-            <!-- <div class="valid-feedback">ur name is valid</div> -->
-            <div class="invalid-feedback">
-                <div class="box">
-                    <span id="val" v-if="!$v.name.required">Required field</span>
-                    <span id="val" v-if="!$v.name.minLength">must have {{$v.name.$params.minLength.min}}letters </span>
-                    <span id="val" v-if="!$v.name.maxLength">must have atmost {{$v.name.$params.maxLength.max}}letters</span>
-                </div>
-            </div>
-
         </div>
 
         <div class="user-name">
-            <input type="username" v-model="email" value="@gmail.com" required>
+            <input type="username" v-model="email" value="@gmail.com" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
             <label>Username</label>
-
         </div>
-     
 
         <div class="pass">
-            <input :type="password_type" class="password" v-model="password" id="pass1" required>
+            <input :type="password_type" class="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$" v-model="password" id="pass1" required>
             <label>Password</label>
         </div>
 
         <div class="pass">
-            <input :type="password_type" class="password" v-model="password_confirmation" id="pass2" required>
+            <input :type="password_type" class="password" v-model="password_confirmation" id="pass2" required  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$" >
             <label>Confirm</label>
         </div>
+
         <div class="iconeye">
             <img src="https://icon-library.com/images/show-hide-icon/show-hide-icon-28.jpg" @click="togglePassword()" class="fadeIn fourth" id="eye">
         </div>
+
         <a class="line3">Use 6 or more characters with a mix of letters, numbers & symbols</a>
         <a href=" http://localhost:3000/login" class="line4">Sign in instead</a>
         <input type="submit" value="Next">
+
     </form>
+
     <div class="side-image">
-        <!-- https://ssl.gstatic.com/accounts/signup/glif/account.svg -->
-        <img src="https://i.pinimg.com/236x/01/0e/b9/010eb99f6b90c32fb5a1eb8f533ae50f.jpg" alt="" class="side-logo">
+
+        <img src="  https://ssl.gstatic.com/accounts/signup/glif/account.svg" alt="" class="side-logo">
     </div>
+
 </div>
 </template>
 
@@ -62,37 +55,21 @@ import Vue from 'vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 
-import {
-    required,
-    minLength,
-    maxLength,
-} from 'vuelidate/lib/validators'
-
 Vue.use(VueAxios, axios)
 export default {
     name: 'Register',
 
     data() {
         return {
-
-            // lastname:'',
             name: '',
             email: '',
-            // email: '',
             password: '',
             password_confirmation: '',
-            //calling password functionality
             password_type: "password",
             password_toggle_element: "show",
         }
     },
-    validations: {
-        name: {
-            required,
-            minLength: minLength(3),
-            maxLength: maxLength(10)
-        },
-    },
+
     methods: {
 
         togglePassword() {
