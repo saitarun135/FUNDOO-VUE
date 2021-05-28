@@ -44,7 +44,7 @@ button {
     margin-top: 25px;
     box-shadow: 0 2px 10px -3px #719BE6;
     display: block;
-    margin: 55px auto 10px auto;
+    margin: 30px auto 10px auto;
 }
 
 a {
@@ -96,4 +96,5 @@ a:hover {
 
 #signin {
     font-weight: 100;
+    color:blueviolet;
 }
