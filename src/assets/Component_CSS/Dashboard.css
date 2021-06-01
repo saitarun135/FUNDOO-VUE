@@ -147,5 +147,10 @@ label #sidebar_btn {
     display:none;
 } 
 
-
-
+#list{
+    margin-top:-25px;
+    font-size:25px; 
+    float:right;
+    color:grey;
+    margin-left:28%;  
+}
