@@ -54,22 +54,6 @@ export default {
         }
     }
 }
-// $(document).ready(function(){
-//     $("#sidebar_btn").click(function(){
-//         $(".sidebar").toggle();
-//     });
-// });
-
-// var li_main=document.querySelector(".li_main");
-// li_main.addEventListener("click",function(){
-//     this.classList.toggle("active");
-// })
-
-// $(document).ready(function(){
-//     $("#sidebar_btn").click(function(){
-//         $(".sidebar").toggle();
-//     });
-// });
 </script>
 
 <style scoped src="../assets/Component_CSS/Dashboard.css">
