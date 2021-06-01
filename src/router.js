@@ -1,12 +1,12 @@
 //package vue -router --save
-
 import Vue from 'vue'
 import Router from 'vue-router'
-
-import HomeLogin from './Pages/HomeLogin.vue'
+import Login from './Pages/Login.vue'
 import Register from './Pages/Register.vue'
 import Forgot from './Pages/Forgot.vue'
 import Reset from './Pages/Reset.vue'
+import Dashboard from './components/Dashboard.vue'
+
 
 
 Vue.use(Router)
@@ -16,7 +16,7 @@ export  default new Router({
     routes:[
         {
             path:'/login',
-            component:HomeLogin
+            component:Login
         },
         {
             path:'/register',
@@ -29,7 +29,12 @@ export  default new Router({
         {
             path:'/reset/:resetToken',
             component:Reset
-        }
+        },
+        {
+            path:'/dashboard',
+            component:Dashboard
+        },
+     
     
         ]
 })
