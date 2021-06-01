@@ -94,7 +94,10 @@ input[type="search"] {
     transition-property: background;
   
 }
-
+.sidebar a:hover {
+    background: lightpink;
+    border-radius:0px 30px 30px 0px;  
+}
 
 
 .sidebar i {
@@ -143,4 +146,6 @@ label #sidebar_btn {
 #check{
     display:none;
 } 
+
+
 
