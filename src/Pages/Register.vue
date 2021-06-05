@@ -4,7 +4,7 @@
         <div class="head">
             <h2><span id="sp1">F</span><span id="sp2">u</span><span id="sp3">n</span>
                 <span id="sp4">d</span><span id="sp5">o</span><span id="sp6">o</span></h2>
-            <!-- <img src="https://uspto.report/TM/88624243/mark" alt="" class="logo"> -->
+           
             <h3>Create your Fundoo Account</h3>
         </div>
         <div class="name">
