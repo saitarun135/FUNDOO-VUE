@@ -2,7 +2,7 @@
 
 <form @submit.prevent="handlesubmit">
     <div class="jumbotron">
-     <!-- <div class="container"> -->
+ 
     <h3>Reset Password</h3>
 
     <div class="form-group">
@@ -21,7 +21,7 @@
     </div>
     <button type="submit" class="btn btn-primary btn-block">update</button>
 </div>
-<!-- </div> -->
+
 </form>
 
 </template>
