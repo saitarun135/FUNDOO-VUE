@@ -1,11 +1,14 @@
 <template>
+
 <form @submit.prevent="handlesubmit">
+    <div class="jumbotron">
+     <!-- <div class="container"> -->
     <h3>Reset Password</h3>
 
     <div class="form-group">
-       
+
         <input type="email" class="form-control" v-model="email" placeholder="Enter your email" />
-       
+
     </div>
 
     <div class="form-group">
@@ -13,11 +16,14 @@
     </div>
 
     <div class="form-group">
-        <input type="password" class="form-control" v-model="password_confirmation" placeholder="confirm_password"/>
- 
+        <input type="password" class="form-control" v-model="password_confirmation" placeholder="confirm_password" />
+
     </div>
-    <button type="submit" class="btn btn-primary btn-block">submit</button>
+    <button type="submit" class="btn btn-primary btn-block">update</button>
+</div>
+<!-- </div> -->
 </form>
+
 </template>
 
 <script>
@@ -47,5 +53,6 @@ export default {
     }
 }
 </script>
+
 <style scoped src="../assets/CSS/Reset.css">
 </style>

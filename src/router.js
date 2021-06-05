@@ -6,8 +6,8 @@ import Register from './Pages/Register.vue'
 import Forgot from './Pages/Forgot.vue'
 import Reset from './Pages/Reset.vue'
 import Dashboard from './components/Dashboard.vue'
-
-
+import Notes from './components/Notes.vue'
+import LoginNew from './Pages/LoginNew.vue'
 
 Vue.use(Router)
 
@@ -34,7 +34,14 @@ export  default new Router({
             path:'/dashboard',
             component:Dashboard
         },
-     
-    
+        {
+            path:'/Note',
+            component:Notes
+        },
+        {
+            path:'/newLogin',
+            component:LoginNew
+        },
+      
         ]
 })

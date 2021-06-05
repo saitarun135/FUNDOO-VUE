@@ -7,6 +7,7 @@
             <!-- <div class="auth-wrapper"> -->
                 <!-- <HomeLogin /> -->
                 <router-view />
+           
                 <!--route part added -->
             <!-- </div> -->
         <!-- </div> -->
@@ -17,13 +18,11 @@
 </template>
 
 <script>
-// import Nav from './components/PagesNav.vue'
-//import HomeLogin from './components/Pages/HomeLogin.vue'
+
 export default {
     name: 'App',
     components: {
         // Nav,
-        //      HomeLogin
     }
 }
 </script>

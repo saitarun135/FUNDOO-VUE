@@ -12,7 +12,7 @@ import './axios'
 
 // import ('./src/Styles/Forget.css')
 Vue.config.productionTip = false
-//vuelidate
+
 Vue.use(vuelidate)
 
 new Vue({
