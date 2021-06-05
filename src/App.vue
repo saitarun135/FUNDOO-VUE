@@ -7,7 +7,6 @@
             <!-- <div class="auth-wrapper"> -->
                 <!-- <HomeLogin /> -->
                 <router-view />
-           
                 <!--route part added -->
             <!-- </div> -->
         <!-- </div> -->
