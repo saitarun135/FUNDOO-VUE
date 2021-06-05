@@ -30,7 +30,6 @@
     </header>
 
     <div class="sidebar">
-        <!-- <i style="color:red;" class="fas fa-angle-double-right"></i> -->
         <a href=""><i class="fas fa-lightbulb"></i><span>Notes</span></a>
         <a href=""><i class="fas fa-bell"></i><span>Reminders</span></a>
         <a href=""><i class="fas fa-pen-square"></i><span>Edit-labels</span></a>
