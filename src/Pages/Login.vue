@@ -1,7 +1,6 @@
 <template>
 <form @submit.prevent="handlesubmit">
 
-    <!-- <img src="https://cdn.dribbble.com/users/2097788/screenshots/5398260/green-letter-f-logo-dribbble.jpg?compress=1&resize=400x300"> -->
     <h2><span id="sp1">F</span><span id="sp2">u</span><span id="sp3">n</span>
         <span id="sp4">d</span><span id="sp5">o</span><span id="sp6">o</span><span id="signin">-signin</span></h2>
     <input type="email" name="email" v-model="email" placeholder="Email" />
@@ -30,8 +29,7 @@ export default {
         }
     },
     methods: {
-
-        async handlesubmit() {
+         async handlesubmit() {
             try {
                 const response = await axios.post('/login', {
                     email: this.email,
