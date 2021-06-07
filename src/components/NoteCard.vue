@@ -16,3 +16,72 @@
 </div>
 </template>
 
+
+
+<style lang="scss" scoped>
+.create-note {
+    position: relative;
+    width: 480px;
+    max-width: 100%;
+    margin: 152px auto;
+    margin-right: 80%;
+    background: #fff;
+    padding: 15px;
+    border-radius: 2px;
+    box-shadow: 0 1px 5px #ccc;
+}
+
+input {
+    width: 100%;
+    max-width: 100%;
+    border: none;
+    padding: 4px;
+    outline: none;
+    font-size: 1.2em;
+}
+
+textarea {
+    width: 100%;
+    max-width: 100%;
+    border: none;
+    padding: 4px;
+    outline: none;
+    font-size: 1.2em;
+}
+
+button {
+    border: none;
+    background: transparent;
+    font-weight: 500;
+}
+
+#second-icon {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#forth-icon {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#fifth-icon {
+    padding-right: 195px;
+}
+
+span {
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+}
+
+#left {
+    margin-left: -60%;
+
+    a {
+        color: black;
+    }
+}
+</style>
