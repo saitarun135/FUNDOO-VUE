@@ -16,7 +16,31 @@
 </div>
 </template>
 
+<script>
+import axios from 'axios'
+export default {
 
+    name: 'NoteCard',
+    data() {
+        return {
+            title: '',
+            body: '',
+        }
+    },
+    methods: {
+        async handlesubmit() {
+            const response = await axios.post('/createNote', {
+                title: this.title,
+                body: this.body
+            });
+            localStorage.getItem('token', response.data.token);
+            alert("note created successfully");
+            console.log(response);
+        }
+
+    },
+}
+</script>
 
 <style lang="scss" scoped>
 .create-note {
