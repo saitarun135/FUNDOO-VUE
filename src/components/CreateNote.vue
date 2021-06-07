@@ -25,3 +25,35 @@ export default {
 }
 </script>
 
+<style lang="scss" scoped>
+input[type="text"] {
+    width: 600px;
+    margin-left: 30%;
+    margin-top: 7%;
+    height: 50px;
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+i {
+    margin-left: -50px;
+    letter-spacing: -15px;
+}
+
+#img1 {
+    opacity: 0.5;
+    font-size: 20px;
+    margin-left: -20px;
+}
+
+#img2 {
+    opacity: 0.5;
+    font-size: 20px;
+}
+
+#ff {
+    display: none;
+}
+</style>
