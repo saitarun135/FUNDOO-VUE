@@ -11,6 +11,7 @@
     </div>
 </div>
 </template>
+
 <script>
 import axios from 'axios'
 export default {
@@ -28,13 +29,12 @@ export default {
 
             console.log(response);
             alert("reset link send successfully");
-            
+
         }
     }
 }
 </script>
 
-<style scoped src="../assets/CSS/Forgot.css">
+<style lang="scss" scoped>
+@import "@/styles/Pages/Forgot.scss";
 </style>
-
-
