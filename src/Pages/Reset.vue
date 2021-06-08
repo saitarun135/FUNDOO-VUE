@@ -54,5 +54,6 @@ export default {
 }
 </script>
 
-<style scoped src="../assets/CSS/Reset.css">
+<style scoped lang="scss">
+@import "@/styles/Pages/Reset.scss";
 </style>
