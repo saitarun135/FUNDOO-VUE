@@ -4,8 +4,7 @@
         <div class="head">
             <h2><span id="sp1">F</span><span id="sp2">u</span><span id="sp3">n</span>
                 <span id="sp4">d</span><span id="sp5">o</span><span id="sp6">o</span></h2>
-           
-            <h3>Create your Fundoo Account</h3>
+         <h3>Create your Fundoo Account</h3>
         </div>
         <div class="name">
             <input type="name" required pattern="[A-Za-z]{3,10}">
@@ -28,12 +27,12 @@
         </div>
 
         <div class="pass">
-            <input :type="password_type" class="password" v-model="password_confirmation" id="pass2" required  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$" >
+            <input :type="password_type" class="password" v-model="password_confirmation" id="pass2" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$">
             <label>Confirm</label>
         </div>
 
         <div class="iconeye">
-            <img src="https://icon-library.com/images/show-hide-icon/show-hide-icon-28.jpg" @click="togglePassword()" class="fadeIn fourth" id="eye">
+            <img src="../assets/Eye.jpg" @click="togglePassword()" class="fadeIn fourth" id="eye">
         </div>
 
         <a class="line3">Use 6 or more characters with a mix of letters, numbers & symbols</a>
@@ -43,8 +42,7 @@
     </form>
 
     <div class="side-image">
-
-        <img src="  https://ssl.gstatic.com/accounts/signup/glif/account.svg" alt="" class="side-logo">
+        <img src="../assets/sidelogo.jpg" alt="notfound" class="side-logo">
     </div>
 
 </div>
@@ -58,7 +56,6 @@ import VueAxios from 'vue-axios'
 Vue.use(VueAxios, axios)
 export default {
     name: 'Register',
-
     data() {
         return {
             name: '',
@@ -71,13 +68,10 @@ export default {
     },
 
     methods: {
-
         togglePassword() {
             this.password_type = this.password_type === 'password' ? 'text' : 'password'
         },
-
         async handlesubmit() {
-
             await axios.post('register', {
                 name: this.name,
                 email: this.email,
@@ -85,7 +79,6 @@ export default {
                 password_confirmation: this.password_confirmation
             });
             alert("user registered successfully..!")
-            // console.log(response);
             this.$router.push('/login');
         }
     }
