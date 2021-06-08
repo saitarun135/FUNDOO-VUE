@@ -19,6 +19,7 @@
 
 <script>
 import axios from 'axios';
+// import service from '../service/User'
 export default {
     name: 'Login',
     data() {
@@ -29,7 +30,19 @@ export default {
         }
     },
     methods: {
-         async handlesubmit() {
+        // userLogin(){
+        //     let data={
+        //         email: this.email,
+        //         password: this.password
+        //     };
+        //     console.log("data to be sent",data);
+        //      service.userLogin(data).then(response=>{
+        //          console.log("response from login",response);
+        //          this.$router.push('/dashboard');
+        //      })
+        // },
+       
+        async handlesubmit() {
             try {
                 const response = await axios.post('/login', {
                     email: this.email,
@@ -45,6 +58,8 @@ export default {
     }
 }
 </script>
-<style scoped src="../assets/CSS/Login.css">
 
+
+<style lang="scss" scoped>
+@import "@/styles/Pages/Login.scss";
 </style>
