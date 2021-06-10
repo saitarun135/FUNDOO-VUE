@@ -18,8 +18,8 @@
 </template>
 
 <script>
-import axios from 'axios';
-// import service from '../service/User'
+// import axios from 'axios';
+import service from '../service/User'
 export default {
     name: 'Login',
     data() {
@@ -30,36 +30,22 @@ export default {
         }
     },
     methods: {
-        // userLogin(){
-        //     let data={
-        //         email: this.email,
-        //         password: this.password
-        //     };
-        //     console.log("data to be sent",data);
-        //      service.userLogin(data).then(response=>{
-        //          console.log("response from login",response);
-        //          this.$router.push('/dashboard');
-        //      })
-        // },
-       
         async handlesubmit() {
-            try {
-                const response = await axios.post('/login', {
-                    email: this.email,
-                    password: this.password
-                });
-                alert("logged in..")
-                localStorage.setItem('token', response.data.token);
-                this.$router.push('/dashboard')
-            } catch (e) {
-                this.error = 'Invalid username/password'
+            let userData = {
+                email: this.email,
+                password: this.password
             }
+            service.userLogin(userData).then(response =>{
+                console.log("user logged in",response);
+                alert("user logged in..");
+                localStorage.setItem('token', response.data.token);
+                this.$router.push("/dashboard");
+            })
         }
     }
 }
 </script>
 
-
 <style lang="scss" scoped>
-@import "@/styles/Pages/Login.scss";
+@import "@/styles/Login.scss";
 </style>
