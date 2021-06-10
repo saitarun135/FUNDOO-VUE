@@ -1,9 +1,10 @@
 <template>
 <div class="dashboard">
+
     <!-- <input type="checkbox" id="check"> -->
     <header>
         <label for="check">
-            <i id="sidebar_btn"  class="fas fa-bars"></i>
+            <i id="sidebar_btn" class="fas fa-bars"></i>
         </label>
 
         <div class="left_area">
@@ -17,11 +18,9 @@
         </div>
 
         <div class="right-area">
-
             <i style="font-size:25px;" id="pic" class="fas fa-user-circle"></i>
         </div>
-
-        <hr>
+ <hr>
     </header>
 
     <div class="sidebar" id="A">
@@ -31,30 +30,27 @@
         <a href=""><i class="fas fa-archive"></i><span>Archive</span></a>
         <a href=""><i class="fas fa-trash-alt"></i><span>Trash</span></a>
     </div>
-    <CreateNote/>
+    <CreateNotes />
 </div>
 </template>
 
 <script>
-
-import CreateNote from './CreateNote.vue'
+import CreateNotes from './CreateNotes.vue'
 export default {
-      components: {
-          CreateNote
+    components: {
+        CreateNotes
     },
-    data() {
-    },
+    data() {},
     methods: {
         toggleMenu(e) {
             e.classList.toggle("active");
             document.querySelector("sidebar").classList.toggle("active");
         },
-      
+
     }
 }
 </script>
 
-<style scoped lang="scss">
-@import "@/styles/components/Dashboard.scss";
+<style lang="scss" scoped>
+@import "@/styles/Dashboard.scss";
 </style>
-
