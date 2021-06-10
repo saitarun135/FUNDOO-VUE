@@ -13,7 +13,8 @@
 </template>
 
 <script>
-import axios from 'axios'
+// import axios from 'axios'
+import service from '../service/User'
 export default {
     name: 'Forgot',
     data() {
@@ -23,18 +24,19 @@ export default {
     },
     methods: {
         async handlesubmit() {
-            const response = await axios.post('http://127.0.0.1:8000/api/auth/sendPasswordResetLink', {
-                email: this.email
-            });
-
-            console.log(response);
-            alert("reset link send successfully");
-
+            let userData = {
+                email: this.email,
+            }
+            service.userForgot(userData).then(response =>{
+                console.log("forgot password:",response);
+                // localStorage.setItem('token', response.data.token);
+                alert("reset link send successfully");
+            })
         }
     }
 }
 </script>
 
 <style lang="scss" scoped>
-@import "@/styles/Pages/Forgot.scss";
+@import "@/styles/Forgot.scss";
 </style>
