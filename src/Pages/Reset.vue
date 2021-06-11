@@ -6,16 +6,16 @@
 
         <div class="form-group">
 
-            <input type="email" class="form-control" v-model="email" placeholder="Enter your email" />
+            <input type="email" class="form-control" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" v-model="email" placeholder="Enter your email" />
 
         </div>
 
         <div class="form-group">
-            <input type="password" class="form-control" v-model="password" placeholder="password" />
+            <input type="password" class="form-control" v-model="password" placeholder="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$" />
         </div>
 
         <div class="form-group">
-            <input type="password" class="form-control" v-model="password_confirmation" placeholder="confirm_password" />
+            <input type="password" class="form-control" v-model="password_confirmation" placeholder="confirm_password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$" />
 
         </div>
         <button type="submit" class="btn btn-primary btn-block">update</button>
