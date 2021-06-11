@@ -9,10 +9,10 @@ export default{
         return axios.post("/login",data);
     },
     userForgot(data){
-        return axios.post("http://127.0.0.1:8000/api/auth/sendPasswordResetLink",data);
+        return axios.post("/auth/sendPasswordResetLink",data);
     },
     userReset(data){
-        return axios.post("http://127.0.0.1:8000/api/auth/resetPassword",data);
+        return axios.post("/auth/resetPassword",data);
     },
     userCreateNote(data){
         return axios.post("/createNote",data);
