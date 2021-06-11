@@ -2,9 +2,10 @@
 <div class="main">
     <form @submit.prevent="handlesubmit">
         <div class="head">
-            <h2><span id="sp1">F</span><span id="sp2">u</span><span id="sp3">n</span>
-                <span id="sp4">d</span><span id="sp5">o</span><span id="sp6">o</span></h2>
-         <h3>Create your Fundoo Account</h3>
+            <h2>
+                <Title />
+            </h2>
+            <h3>Create your Fundoo Account</h3>
         </div>
         <div class="name">
             <input type="name" required pattern="[A-Za-z]{3,10}">
@@ -22,12 +23,12 @@
         </div>
 
         <div class="pass">
-            <input :type="password_type" class="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$" v-model="password" id="pass1" required>
+            <input :type="password_type" class="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$" v-model="password"  required>
             <label>Password</label>
         </div>
 
         <div class="pass">
-            <input :type="password_type" class="password" v-model="password_confirmation" id="pass2" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$">
+            <input :type="password_type" class="password" v-model="password_confirmation" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$">
             <label>Confirm</label>
         </div>
 
@@ -49,6 +50,7 @@
 </template>
 
 <script>
+import Title from './Title.vue'
 import Vue from 'vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
@@ -56,6 +58,9 @@ import VueAxios from 'vue-axios'
 Vue.use(VueAxios, axios)
 export default {
     name: 'Register',
+    components: {
+        Title
+    },
     data() {
         return {
             name: '',
