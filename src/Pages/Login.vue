@@ -3,9 +3,9 @@
 
     <h2><span id="sp1">F</span><span id="sp2">u</span><span id="sp3">n</span>
         <span id="sp4">d</span><span id="sp5">o</span><span id="sp6">o</span><span id="signin">-signin</span></h2>
-    <input type="email" name="email" v-model="email" placeholder="Email" />
+    <input type="email" name="email" v-model="email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email" />
 
-    <input type="password" name="Password" v-model="password" id="input-username" placeholder="Password" />
+    <input type="password" name="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$" v-model="password" id="input-username" placeholder="Password" />
 
     <button class="btn btn-primary btn-block">Sign In</button>
 
