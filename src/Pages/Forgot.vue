@@ -4,7 +4,7 @@
         <form @submit.prevent="handlesubmit">
             <h3>Forget-password</h3>
 
-            <input type="email" v-model="email" placeholder="Email Address" />
+            <input type="email" v-model="email" placeholder="Email Address" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
             <button type="submit" class="btn btn-primary btn-block">send Recovery link</button>
 
         </form>
