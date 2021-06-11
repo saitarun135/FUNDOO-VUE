@@ -1,0 +1,113 @@
+.main-section input[type="text"] {
+    width: 600px;
+    margin-left: 30%;
+    margin-top: 7%;
+    height: 50px;
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+i {
+    margin-left: -50px;
+    letter-spacing: -15px;
+}
+
+.img1 {
+    opacity: 0.5;
+    font-size: 20px;
+    margin-left: -20px;
+}
+
+.img2 {
+    opacity: 0.5;
+    font-size: 20px;
+}
+
+#ff {
+    display: none;
+}
+
+.create {
+    padding-top: 5%;
+}
+
+.create-note {
+    position: relative;
+    width: 550px;
+    max-width: 100%;
+    margin: 152px auto;
+    margin-right: 80%;
+    background: #fff;
+    padding: 15px;
+    border-radius: 2px;
+    box-shadow: 0 1px 5px #ccc;
+}
+
+.create-note input {
+    width: 100%;
+    max-width: 100%;
+    border: none;
+    padding: 4px;
+    outline: none;
+    font-size: 1.2em;
+}
+
+textarea {
+    width: 100%;
+    max-width: 100%;
+    border: none;
+    padding: 4px;
+    outline: none;
+    font-size: 1.2em;
+}
+
+button {
+    border: none;
+    background: transparent;
+    font-weight: 500;
+    float: right;
+    margin-top: -5%;
+}
+
+#first-icon {
+    opacity: 0.9;
+}
+
+#second-icon {
+    padding-left: 30px;
+    padding-right: 30px;
+    opacity: 0.9;
+}
+
+#third-icon {
+    opacity: 0.9;
+}
+
+#forth-icon {
+    padding-left: 30px;
+    padding-right: 30px;
+    opacity: 0.9;
+}
+
+#fifth-icon {
+    padding-right: 195px;
+    opacity: 0.9;
+}
+
+span {
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+}
+
+#left {
+    margin-left: -60%;
+}
+
+#left a {
+    color: black;
+}
