@@ -45,9 +45,13 @@ export default {
                 resetToken: this.$route.params.resetToken
             }
             service.userReset(userData).then(response => {
-                console.log(response);
                 alert("successfully updated");
+                console.log(response);
+                localStorage.getItem('token',response.data.resetToken);
                 this.$router.push('/login');
+            }).catch(error=>{
+                console.warn(error);
+                return error;
             })
         }
 
