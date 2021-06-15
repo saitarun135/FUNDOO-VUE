@@ -15,18 +15,18 @@
             </div>
         </form>
     </div>
-    <DisplayNotes v-if="flag==true"/>
+    <DisplayNotes v-if="flag==true" />
 </div>
 </template>
 
 <script>
 import DisplayNotes from './DisplayNotes.vue'
 import service from '../service/User'
-// import axios from 'axios'
 import icons from './icons.vue'
 export default {
     components: {
-        icons,DisplayNotes
+        icons,
+        DisplayNotes
     },
     data() {
         return {
@@ -51,6 +51,10 @@ export default {
             service.userCreateNote(userData).then(response => {
                 console.log("Notes", response);
                 localStorage.getItem('token', response.data.token);
+                alert("Note created successfully");
+            }).catch(error => {
+                alert("Empty notes not accepted..");
+                return error;
             })
         },
         clear() {
@@ -61,6 +65,6 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 @import "@/styles/CreateNotes.scss";
 </style>
