@@ -1,0 +1,33 @@
+/* .container:hover {
+    border-style: ridge;
+} */
+.card-content {
+	input {
+		border: none;
+	}
+	textarea {
+		border: none;
+		outline: none;
+	}
+}
+.container {
+	height: 200px;
+	width: 500px;
+	display: flex;
+	margin-top: 5%;
+	border-style: ridge;
+}
+.import-icons {
+	display: block;
+	margin-left: -22%;
+	padding-top: 35%;
+	button {
+		border: none;
+		background: none;
+		float: right;
+		font-weight: 600;
+		font-family: Arial, Helvetica, sans-serif;
+		margin-top: -6%;
+		padding-left: 400px;
+	}
+}
