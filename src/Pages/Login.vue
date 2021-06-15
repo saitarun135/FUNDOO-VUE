@@ -1,24 +1,20 @@
 <template>
 <form @submit.prevent="handlesubmit">
+    <h2><span class="signin">Login</span></h2>
 
-    <h2><span class="sp1">F</span><span class="sp2">u</span><span class="sp3">n</span>
-        <span class="sp4">d</span><span class="sp5">o</span><span class="sp6">o</span><span class="signin">-signin</span></h2>
     <input type="email" name="email" v-model="email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email" />
-
-    <input type="password" name="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$" v-model="password"  placeholder="Password" />
-
+    <input type="password" name="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$" v-model="password" placeholder="Password" />
     <button class="btn btn-primary btn-block">Sign In</button>
+    <a style="text-decoration:none;" href="/register">Create account</a>
 
-    <a href="http://localhost:3000/register">Create account</a>
     <div class="fp">
-        <a href="http://localhost:3000/forgot">forgot password</a>
+        <a href="/forgot">Forgot password</a>
     </div>
 
 </form>
 </template>
 
 <script>
-// import axios from 'axios';
 import service from '../service/User'
 export default {
     name: 'Login',
@@ -35,11 +31,14 @@ export default {
                 email: this.email,
                 password: this.password
             }
-            service.userLogin(userData).then(response =>{
-                console.log("user logged in",response);
-                alert("user logged in..");
+            service.userLogin(userData).then(response => {
+                console.log("user logged in", response);
                 localStorage.setItem('token', response.data.token);
+                alert("logged in...");
                 this.$router.push("/dashboard");
+            }).catch(error=>{
+                alert("invalid credentials/please check your inputs");
+                return error;
             })
         }
     }
