@@ -1,28 +1,23 @@
 <template>
-<div class="dashboard">
-
-    <!-- <input type="checkbox" id="check"> -->
+<div class="dashboard navbar-fixed">
     <header>
-        <label for="check">
-            <i id="sidebar_btn" class="fas fa-bars"></i>
-        </label>
-
-        <div class="left_area">
-            <h3><img style="height:35px;" src="../assets/keep.jpg" alt="not" />Fund<span>oo</span></h3>
+        <div class="menu-btn">
         </div>
-
+        <div class="left_area">
+            <div class="btn">
+            </div>
+                <h3><i id="sidebar_btn" @click="hidingSidebar"  class="fas fa-bas" @dblclick="showingSidebar">&#9776;</i><img style="height:35px;" src="../assets/keep.jpg" alt="not" />Fund<span>oo</span></h3>
+            </div>
         <div class="input-group">
             <div class="form-outline">
                 <input type="search" id="form1" class="form-control" placeholder='search...' />
             </div>
         </div>
-
         <div class="right-area">
             <i style="font-size:25px;" id="pic" class="fas fa-user-circle"></i>
         </div>
- <hr>
+        <hr>
     </header>
-
     <div class="sidebar" id="A">
         <a href=""><i class="fas fa-lightbulb"></i><span>Notes</span></a>
         <a href=""><i class="fas fa-bell"></i><span>Reminders</span></a>
@@ -46,11 +41,17 @@ export default {
             e.classList.toggle("active");
             document.querySelector("sidebar").classList.toggle("active");
         },
-
+        hidingSidebar() {
+            document.getElementById("A").style.left = "-250px";
+            document.getElementById("A").style.transition = "0.7s";
+        },
+        showingSidebar() {
+            document.getElementById("A").style.left = "0px";
+        }
     }
 }
 </script>
 
 <style lang="scss" scoped>
-@import "@/styles/Dashboard.scss";
+    @import "@/styles/Dashboard.scss";
 </style>
