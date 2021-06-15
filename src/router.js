@@ -6,8 +6,9 @@ import Register from './Pages/Register.vue'
 import Forgot from './Pages/Forgot.vue'
 import Reset from './Pages/Reset.vue'
 import Dashboard from './components/Dashboard.vue'
-import Notes from './components/Notes.vue'
-import LoginNew from './Pages/LoginNew.vue'
+import CreateNotes from './components/CreateNotes.vue'
+import DisplayNotes from './components/DisplayNotes.vue'
+
 
 Vue.use(Router)
 
@@ -32,16 +33,17 @@ export  default new Router({
         },
         {
             path:'/dashboard',
-            component:Dashboard
+            component:Dashboard,
+            children:[{
+                path:'/createNote',
+                component:CreateNotes
+            },
+            {
+                path:'/display',
+                component:DisplayNotes
+            }
+        ]
         },
-        {
-            path:'/Note',
-            component:Notes
-        },
-        {
-            path:'/newLogin',
-            component:LoginNew
-        },
-      
+    
         ]
 })
