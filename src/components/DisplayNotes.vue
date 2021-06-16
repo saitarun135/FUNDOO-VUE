@@ -33,9 +33,6 @@ export default {
         async handlesubmit() {
             service.userDisplayNotes().then(response => {
                 this.notes.push(...response.data);
-            }).catch(error => {
-                alert("Error in displaying notes");
-                return error;
             })
         },
     }
