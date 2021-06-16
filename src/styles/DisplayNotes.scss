@@ -33,4 +33,9 @@
 		padding-left: 400px;
 	}
 }
-
+.note-icons { 
+	visibility: hidden;
+}
+.note:hover .note-icons {
+	visibility: visible;
+}
