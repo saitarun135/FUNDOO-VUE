@@ -1,6 +1,4 @@
-/* .container:hover {
-    border-style: ridge;
-} */
+
 .card-content {
 	input {
 		border: none;
@@ -10,17 +8,21 @@
 		outline: none;
 	}
 }
+/* dividing the width percentage */
 .container {
 	height: 200px;
-	width: 500px;
-	display: flex;
+	width: 25%;
+	float:left;
+	margin: -2.98%;	
+	margin-left:20%;
 	margin-top: 5%;
 	border-style: ridge;
 }
 .import-icons {
 	display: block;
-	margin-left: -22%;
-	padding-top: 35%;
+	margin-left: -2%;
+	padding-top: 25%;
+
 	button {
 		border: none;
 		background: none;
@@ -31,3 +33,4 @@
 		padding-left: 400px;
 	}
 }
+
