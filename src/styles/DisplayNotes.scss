@@ -11,10 +11,10 @@
 /* dividing the width percentage */
 .container {
 	height: 200px;
-	width: 25%;
+	width: 27%;
 	float:left;
-	margin: -2.98%;	
-	margin-left:20%;
+	margin: -3.5%;	
+	margin-left:18%;
 	margin-top: 5%;
 	border-style: ridge;
 }
@@ -38,4 +38,7 @@
 }
 .note:hover .note-icons {
 	visibility: visible;
+}
+p{
+	margin-top:1px;
 }
