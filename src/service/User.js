@@ -17,5 +17,8 @@ export default{
     },
     userCreateNote(data){
         return axios.postData("/createNote",data);
+    },
+    userDisplayNotes(){
+        return axios.getData("/displayNotes");
     }
 }
