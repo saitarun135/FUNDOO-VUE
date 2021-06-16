@@ -11,22 +11,18 @@
             <input type="name" required pattern="[A-Za-z]{3,10}">
             <label>First name</label>
         </div>
-
         <div class="name">
             <input type="name" required v-model="name" pattern="[A-Za-z]{3,10}">
             <label>Last name</label>
         </div>
-
         <div class="user-name">
             <input type="username" v-model="email" value="@gmail.com" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
             <label>Username</label>
         </div>
-
         <div class="pass">
             <input :type="password_type" class="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$" v-model="password"  required>
             <label>Password</label>
         </div>
-
         <div class="pass">
             <input :type="password_type" class="password" v-model="password_confirmation" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$">
             <label>Confirm</label>
@@ -39,9 +35,7 @@
         <a class="line3">Use 6 or more characters with a mix of letters, numbers & symbols</a>
         <a href=" http://localhost:3000/login" class="line4">Sign in instead</a>
         <input type="submit" value="Next">
-
     </form>
-
     <div class="side-image">
         <img src="../assets/sidelogo.jpg" alt="notfound" class="side-logo">
     </div>

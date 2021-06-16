@@ -25,7 +25,7 @@ form {
 input {
 	border-radius: 100px;
 	padding: 10px 15px;
-	width: 50%;
+	width: 60%;
 	border: 1px solid black;
 	outline: none;
 	display: block;
@@ -79,6 +79,12 @@ a {
 	color: orangered;
 }
 .signin {
-	font-weight: 100;
-	color: blueviolet;
+	font-weight: 400;
+	color: blue;
+}
+.Reg-link{
+	text-decoration: none;
+}
+.fp a{
+	text-decoration: none;
 }
