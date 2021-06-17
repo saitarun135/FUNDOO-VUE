@@ -8,7 +8,18 @@
 	}
 }
 /* dividing the width percentage */
-
+.container {
+	height: 200px;
+	width: 27%;
+	float:left;
+	margin: -2.5%;	
+	margin-left:18%;
+	margin-right:-17.9%; /*newly added*/
+	margin-top: 5%;
+	border-style:ridge;
+	border-radius: 5px;
+	border-width: medium;
+}
 .import-icons {
 	display: block;
 	margin-left: -2%;
@@ -32,4 +43,7 @@
 }
 p{
 	margin-top:12px;
+}
+h5{
+	margin-top:1%;
 }
