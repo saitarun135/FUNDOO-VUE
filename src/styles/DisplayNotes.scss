@@ -8,15 +8,7 @@
 	}
 }
 /* dividing the width percentage */
-.container {
-	height: 200px;
-	width: 27%;
-	float:left;
-	margin: -3.5%;	
-	margin-left:18%;
-	margin-top: 5%;
-	border-style: ridge;
-}
+
 .import-icons {
 	display: block;
 	margin-left: -2%;
@@ -32,7 +24,12 @@
 		padding-left: 400px;
 	}
 }
-
+.note-icons { 
+	visibility: hidden;
+}
+.note:hover .note-icons {
+	visibility: visible;
+}
 p{
-	margin-top:1px;
+	margin-top:12px;
 }
