@@ -1,21 +1,24 @@
 <template>
-<div class="main-section">
+<div class="carddisplay-section">
     <div v-for="note in notes" :key="note.data" class="container note">
-        <div  class="card-content ">
+        <div class="card-content">
             <h5>{{note.title}}</h5>
-            <p><i>{{note.body}}</i></p>
+            <p>{{note.body}}</p>
         </div>
         <div class="import-icons">
-            <icons class="note-icons" />
-            <button v-if="flag" type="button" class="btn-grp" @click="handlesubmit();Togglebtn();">close</button>
+            <icons class="imported-icons " />
+            <button v-if="flag" class="card-button" type="button" @click="handlesubmit();Togglebtn();">Close</button>
         </div>
+
     </div>
 </div>
 </template>
+
 <script>
 import service from '../service/User'
 import icons from './icons'
 export default {
+    name: 'DisplayNotes',
     components: {
         icons
     },
@@ -25,7 +28,7 @@ export default {
             notes: [{
                 id: 1,
                 title: 'Fundoo',
-                body: 'unlimited Notes...'
+                body: 'unlimited notes..'
             }, ],
         }
     },
@@ -43,5 +46,5 @@ export default {
 </script>
 
 <style lang="scss">
-    @import "@/styles/DisplayNotes.scss";
+@import "@/styles/DisplayNotes.scss";
 </style>
