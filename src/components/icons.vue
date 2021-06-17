@@ -1,36 +1,47 @@
 <template>
-<div class="used-icons">
-    <i id="first-icon" class="fas fa-bell"></i>
-    <i id="second-icon" class="fas fa-user"></i>
-    <i id="third-icon" class="fas fa-palette"></i>
-    <i id="forth-icon" class="fas fa-archive"></i>
-    <i id="fifth-icon" class="fas fa-ellipsis-v"></i>
+<div class="footer">
+    <i class="fas fa-bell"></i>
+    <i class="fas fa-user"></i>
+    <i class="fas fa-palette"></i>
+    <i clss="fas fa-image"></i>
+    <i class="fas fa-archive"></i>
+    <i class="fas fa-ellipsis-v"></i>
 </div>
 </template>
 
 <style scoped>
-#first-icon {
+.footer i {
     opacity: 0.9;
+    position: relative;
 }
 
-#second-icon {
-    padding-left: 30px;
-    padding-right: 30px;
-    opacity: 0.9;
+.footer .fa-bell {
+    margin-top: 5px;
+    margin-left: 10px;
 }
 
-#third-icon {
-    opacity: 0.9;
+.footer .fa-user {
+    margin-top: 5px;
+    margin-left: 35px;
 }
 
-#forth-icon {
-    padding-left: 30px;
-    padding-right: 30px;
-    opacity: 0.9;
+.footer .fa-palette {
+    margin-top: 5px;
+    margin-left: 35px;
 }
 
-#fifth-icon {
-    padding-right: 195px;
-    opacity: 0.9;
+.footer .fa-image {
+    margin-top: 5px;
+    margin-left: 35px;
+}
+
+.footer .fa-archive {
+    margin-top: 5px;
+    margin-left: 35px;
+}
+
+.footer .fa-ellipsis-v {
+    margin-top: 5px;
+    margin-left: 35px;
 }
 </style>
