@@ -25,24 +25,24 @@
 		padding-left: 10px;
 	}
 	p {
-		font-size: 17px;
+		font-size: 18px;
 		width: 90%;
 		height: 60px;
 		font-family: 'Times New Roman', Times, serif;
 		width: 100%;
 		border: none;
-		padding: 0px 10px;
+		padding: 7.5px 10px;
 		outline: none;
 	}
 }
 .card-button {
 	float: right;
-	margin-top: -19px;
+	margin-top: -1px;
 	margin-left: 240px;
 	font-size: 14px;
 	border: none;
 	background: none;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Times New Roman', Times, serif;
 }
 .note-icons {
 	visibility: hidden;
@@ -55,24 +55,10 @@
 	}
 }
 .imported-icons {
-	margin-top: 17%;
+	margin-top: 10%;
 }
-#blur.active{
-	filter:blur(0.5px);
-	// pointer-events: none;
-	// user-select: none;
-}
-#popup{
-	position: fixed;
-	top:40%;
-	left:50%;
-	transform: translate(-50%,-50%);
-	visibility: hidden;
-	opacity: 0;
-	transition: 0.5s;
-}
-#popup.active{
-	visibility: visible;
-	opacity: 1;
-	transition: 0.5s;
+
+.card-content p,h5 { 
+	word-break: break-word;
+	overflow-wrap: break-word;
 }
