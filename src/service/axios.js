@@ -4,7 +4,7 @@
 import axios from 'axios'
 
 axios.defaults.baseURL=process.env.VUE_APP_AXIOS_URL
-axios.defaults.headers.common['Authorization']='Bearer'+localStorage.getItem('token');
+axios.defaults.headers.common['Authorization']='Bearer'+ localStorage.getItem('token');
 
 export default class AxiosService{
    postData(url,data){
@@ -20,6 +20,12 @@ export default class AxiosService{
             return response;
        }).catch(error=>{
             return error;
+       })
+   }
+   updateData(url,data){
+       return axios.put(url,data).then(response=>{
+        localStorage.getItem('token', response.data.token); 
+           return response;
        })
    }
 }
