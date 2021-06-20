@@ -1,0 +1,38 @@
+.update {
+	padding-top: 0%;
+}
+.update-note {
+	position: relative;
+	width: 550px;
+	max-width: 100%;
+	margin: 152px auto;
+	margin-right: 80%;
+	background: rgb(255, 255, 255);
+	padding: 15px;
+	border-radius: 5px;
+	box-shadow: 0 1px 5px #ccc;
+	input {
+		width: 100%;
+		max-width: 100%;
+		border: none;
+		padding: 4px;
+		outline: none;
+		font-size: 1.2em;
+	}
+}
+textarea {
+	width: 100%;
+	max-width: 100%;
+	border: none;
+	padding: 4px;
+	outline: none;
+	font-size: 1.2em;
+}
+button {
+	border: none;
+	background: transparent;
+	font-weight: 500;
+	float: right;
+	margin-top: -5%;
+	cursor: pointer;
+}
