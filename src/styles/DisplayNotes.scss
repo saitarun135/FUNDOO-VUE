@@ -57,7 +57,25 @@
 .imported-icons {
 	margin-top: 10%;
 }
-
+#blur.active{
+	filter:blur(0.5px);
+	pointer-events: none;
+	user-select: none;
+}
+#popup{
+	position: fixed;
+	top:40%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.5s;
+}
+#popup.active{
+	visibility: visible;
+	opacity: 1;
+	transition: 0.5s;
+}
 .card-content p,h5 { 
 	word-break: break-word;
 	overflow-wrap: break-word;
