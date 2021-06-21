@@ -8,6 +8,7 @@ import Reset from './Pages/Reset.vue'
 import Dashboard from './components/Dashboard.vue'
 import CreateNotes from './components/CreateNotes.vue'
 import DisplayNotes from './components/DisplayNotes.vue'
+import UpdateNotes from './components/UpdateNotes.vue'
 
 
 Vue.use(Router)
@@ -31,6 +32,7 @@ export  default new Router({
             path:'/reset/:resetToken',
             component:Reset
         },
+      
         {
             path:'/dashboard',
             component:Dashboard,
@@ -41,9 +43,14 @@ export  default new Router({
             {
                 path:'/display',
                 component:DisplayNotes
-            }
+            },
+            {
+                path:'/update',
+                component:UpdateNotes
+            },
         ]
         },
+       
     
         ]
 })
