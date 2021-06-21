@@ -6,8 +6,8 @@
         <div class="left_area">
             <div class="btn">
             </div>
-                <h3><i id="sidebar_btn" @click="hidingSidebar"  class="fas fa-bas" @dblclick="showingSidebar">&#9776;</i><img style="height:35px;" src="../assets/keep.jpg" alt="not" />Fund<span>oo</span></h3>
-            </div>
+            <h3><i id="sidebar_btn" @click="hidingSidebar" class="fas fa-bas" @dblclick="showingSidebar">&#9776;</i><img style="height:35px;" src="../assets/keep.jpg" alt="not" />Fund<span>oo</span></h3>
+        </div>
         <div class="input-group">
             <div class="form-outline">
                 <input type="search" id="form1" class="form-control" placeholder='search...' />
@@ -19,7 +19,8 @@
         <hr>
     </header>
     <div class="sidebar" id="A">
-        <a href=""><i class="fas fa-lightbulb"></i><span>Notes</span></a>
+        <!-- <a href="/display"><i class="fas fa-lightbulb"></i><span>Notes</span></a> -->
+         <router-link to = "/display"><i class="fas fa-lightbulb"></i><span>Notes</span></router-link>
         <a href=""><i class="fas fa-bell"></i><span>Reminders</span></a>
         <a href=""><i class="fas fa-pen-square"></i><span>Edit-labels</span></a>
         <a href=""><i class="fas fa-archive"></i><span>Archive</span></a>
@@ -35,7 +36,9 @@ export default {
     components: {
         CreateNotes
     },
-    data() {return{}},
+    data() {
+        return {}
+    },
     methods: {
         toggleMenu(e) {
             e.classList.toggle("active");
@@ -53,5 +56,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    @import "@/styles/Dashboard.scss";
+@import "@/styles/Dashboard.scss";
 </style>
