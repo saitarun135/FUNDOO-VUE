@@ -35,7 +35,7 @@ export default {
     components: {
         CreateNotes
     },
-    data() {},
+    data() {return{}},
     methods: {
         toggleMenu(e) {
             e.classList.toggle("active");
