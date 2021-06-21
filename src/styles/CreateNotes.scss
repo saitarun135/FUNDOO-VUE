@@ -1,3 +1,5 @@
+@import "colors";
+
 .main-section input[type="text"] {
     width: 600px;
     margin-left: 30%;
@@ -39,10 +41,10 @@ i {
     max-width: 100%;
     margin: 152px auto;
     margin-right: 80%;
-    background: #fff;
+    background: $dull_white;
     padding: 15px;
     border-radius: 2px;
-    box-shadow: 0 1px 5px #ccc;
+    box-shadow: 0 1px 5px $box_shadow;
 }
 
 .create-note input {
@@ -110,5 +112,5 @@ a {
 }
 
 #left a {
-    color: black;
+    color: $black;
 }
