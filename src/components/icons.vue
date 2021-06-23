@@ -5,43 +5,47 @@
     <i class="fas fa-palette"></i>
     <i clss="fas fa-image"></i>
     <i class="fas fa-archive"></i>
-    <i class="fas fa-ellipsis-v"></i>
+    <div class="dropdown">
+        <i @click="myFunction();" class="fas fa-ellipsis-v"></i>
+        <div ref="myDropdown" class="dropdown-content">
+            <a @click="handlesubmit();">DeleteNote</a>
+            <a>ChangeLabel</a>
+        </div>
+    </div>
 </div>
 </template>
 
-<style scoped>
-.footer i {
-    opacity: 0.9;
-    position: relative;
+<script>
+import service from '../service/User'
+export default {
+    props: ['cardId'],
+    data() {
+        return {
+            clickedCard: '',
+        }
+    },
+    methods: {
+        myFunction(event) {
+            this.$refs.myDropdown.classList.toggle("show");
+            return event;
+            // document.getElementById("myDropdown").classList.toggle("show");
+        },
+        async handlesubmit() {
+            let userData = {
+                id: this.cardId,
+            }
+            service.userTrashNote(userData).then(response => {
+                alert("Note deleted Successfully");
+                return response;
+            }).catch(error => {
+                alert("Error");
+                return error;
+            })
+        },
+    }
 }
+</script>
 
-.footer .fa-bell {
-    margin-top: 5px;
-    margin-left: 10px;
-}
-
-.footer .fa-user {
-    margin-top: 5px;
-    margin-left: 35px;
-}
-
-.footer .fa-palette {
-    margin-top: 5px;
-    margin-left: 35px;
-}
-
-.footer .fa-image {
-    margin-top: 5px;
-    margin-left: 35px;
-}
-
-.footer .fa-archive {
-    margin-top: 5px;
-    margin-left: 35px;
-}
-
-.footer .fa-ellipsis-v {
-    margin-top: 5px;
-    margin-left: 35px;
-}
+<style lang="scss" scoped>
+    @import "@/styles/icons.scss";
 </style>

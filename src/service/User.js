@@ -20,5 +20,12 @@ export default{
     },
     userDisplayNotes(){
         return axios.getData("/displayNotes");
+    },
+    userUpdateNotes(data){
+        return axios.updateData(`/updateNote/${data.id}`,data);
+    },
+    userTrashNote(data){
+        return axios.userTrash(`/deleteNote/${data.id}`,data);
     }
+    
 }

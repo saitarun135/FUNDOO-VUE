@@ -26,7 +26,13 @@ export default class AxiosService{
        return axios.put(url,data).then(response=>{
         localStorage.getItem('token', response.data.token); 
            return response;
-       })
+       }).catch(error=>{return error;})
+   }
+   userTrash(url,data){
+       return axios.delete(url,data).then(response=>{
+        localStorage.getItem('token', response.data.token);
+        return response;
+       }).catch(error=>{return error;})
    }
 }
 

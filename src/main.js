@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 import router from './router'
 import './service/axios'
-
+//import store from './store';
 
 // import ('./src/Styles/Forget.css')
 Vue.config.productionTip = false

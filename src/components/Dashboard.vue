@@ -20,11 +20,12 @@
     </header>
     <div class="sidebar" id="A">
         <!-- <a href="/display"><i class="fas fa-lightbulb"></i><span>Notes</span></a> -->
-         <router-link to = "/display"><i class="fas fa-lightbulb"></i><span>Notes</span></router-link>
+        <router-link to="/display"><i class="fas fa-lightbulb"></i><span>Notes</span></router-link>
         <a href=""><i class="fas fa-bell"></i><span>Reminders</span></a>
         <a href=""><i class="fas fa-pen-square"></i><span>Edit-labels</span></a>
         <a href=""><i class="fas fa-archive"></i><span>Archive</span></a>
         <a href=""><i class="fas fa-trash-alt"></i><span>Trash</span></a>
+        <!-- <router-link to="/trash"> <i class="fas fa-trash-alt"></i><span>Trash</span></router-link> -->
     </div>
     <CreateNotes />
 </div>

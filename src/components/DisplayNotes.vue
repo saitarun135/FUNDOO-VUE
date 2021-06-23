@@ -6,7 +6,7 @@
             <p>{{note.body}}</p>
         </div>
         <div class="import-icons">
-            <icons class="imported-icons note-icons" />
+            <icons class="imported-icons note-icons" :cardId="note.id"  />
             <button v-if="flag" class="card-button" type="button" @click="handlesubmit();Togglebtn();">Close</button>
         </div>
     </div>
@@ -55,6 +55,7 @@ export default {
             var popup = document.getElementById('popup');
             popup.classList.toggle('active');
         },
+        
     }
 }
 </script>

@@ -1,19 +1,14 @@
-// import  LoginNew from '../../src/Pages/LoginNew.vue';
-// import{shallowMount} from '@vue/test-utils';
-// describe('LoginNew.vue',()=>{
-//     describe('When Loaded',()=>{
-//         it('has the required elements',()=>{
-//             const wrapper =shallowMount(LoginNew);
-//             expect(wrapper.find('#title').exists()).toBe(true);
-//             expect(wrapper.find('#title').text()).toBe('Login');
-//             expect(wrapper.find('#input-username').exists()).toBe(true);
-//             expect(wrapper.find('#input-password').exists()).toBe(true);
-//             expect(wrapper.find('#btn-sign-in').exists()).toBe(true);
-//             expect(wrapper.find('#btn-sign-in').text()).toBe('Sign In');
-            
-//         });
-//     });
-// });
+import  LoginNew from '../../src/Pages/LoginNew.vue';
+import{shallowMount} from '@vue/test-utils';
+describe('LoginNew.vue',()=>{
+    describe('When Loaded',()=>{
+        it('has the required elements',()=>{
+            const wrapper =shallowMount(LoginNew);
+            expect(wrapper.find('#input-username').exists()).toBe(true);
+            expect(wrapper.find('#input-password').exists()).toBe(true);
+        });
+    });
+});
 
 
 

@@ -9,6 +9,7 @@ import Dashboard from './components/Dashboard.vue'
 import CreateNotes from './components/CreateNotes.vue'
 import DisplayNotes from './components/DisplayNotes.vue'
 import UpdateNotes from './components/UpdateNotes.vue'
+import DeleteNote from './components/DeleteNote.vue'
 
 
 Vue.use(Router)
@@ -32,7 +33,7 @@ export  default new Router({
             path:'/reset/:resetToken',
             component:Reset
         },
-      
+       
         {
             path:'/dashboard',
             component:Dashboard,
@@ -47,6 +48,10 @@ export  default new Router({
             {
                 path:'/update',
                 component:UpdateNotes
+            },
+            {
+                path:'/trash',
+                component:DeleteNote,
             },
         ]
         },
