@@ -1,0 +1,86 @@
+@import "colors";
+.footer i {
+    opacity: 0.9;
+    position: relative;
+}
+
+.footer .fa-bell {
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.footer .fa-user {
+    margin-top: 5px;
+    margin-left: 40px;
+}
+
+.footer .fa-palette {
+    margin-top: 5px;
+    margin-left: 40px;
+}
+
+.footer .fa-image {
+    margin-top: 5px;
+    margin-left: 40px;
+}
+
+.footer .fa-archive {
+    margin-top: 5px;
+    margin-left: 40px;
+}
+
+.footer .fa-ellipsis-v {
+    margin-top: 5px;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+.dropbtn {
+    background-color: $white;
+    color: $white;
+    padding: 16px;
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+    background-color: #2980B9;
+}
+
+.dropdown {
+
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown a {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    margin-left: 40%;
+    display: none;
+    position: absolute;
+    background: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: $black;
+    padding: 8px 17px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(241, 234, 234)
+}
+
+.show {
+    display: block;
+}
