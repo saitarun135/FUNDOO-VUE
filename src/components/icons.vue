@@ -8,7 +8,7 @@
     <div class="dropdown">
         <i @click="myFunction();" class="fas fa-ellipsis-v"></i>
         <div ref="myDropdown" class="dropdown-content">
-            <a @click="handlesubmit();">DeleteNote</a>
+            <a >DeleteNote</a>
             <a>ChangeLabel</a>
         </div>
     </div>
@@ -30,18 +30,7 @@ export default {
             return event;
             // document.getElementById("myDropdown").classList.toggle("show");
         },
-        async handlesubmit() {
-            let userData = {
-                id: this.cardId,
-            }
-            service.userTrashNote(userData).then(response => {
-                alert("Note deleted Successfully");
-                return response;
-            }).catch(error => {
-                alert("Error");
-                return error;
-            })
-        },
+       
     }
 }
 </script>
