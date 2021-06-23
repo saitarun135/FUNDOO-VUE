@@ -8,7 +8,7 @@
     <div class="dropdown">
         <i @click="myFunction();" class="fas fa-ellipsis-v"></i>
         <div ref="myDropdown" class="dropdown-content">
-            <a >DeleteNote</a>
+            <a @click="handlesubmit();">DeleteNote</a>
             <a>ChangeLabel</a>
         </div>
     </div>
@@ -28,13 +28,23 @@ export default {
         myFunction(event) {
             this.$refs.myDropdown.classList.toggle("show");
             return event;
-            // document.getElementById("myDropdown").classList.toggle("show");
         },
-       
+        async handlesubmit() {
+            let userData = {
+                id: this.cardId,
+            }
+            service.userTrashNote(userData).then(response => {
+                alert("Note Moved to Trash");
+                return response;
+            }).catch(error => {
+                alert("Error");
+                return error;
+            })
+        },
     }
 }
 </script>
 
 <style lang="scss" scoped>
-    @import "@/styles/icons.scss";
+@import "@/styles/icons.scss";
 </style>
