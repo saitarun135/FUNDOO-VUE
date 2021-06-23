@@ -46,5 +46,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/styles/icons.scss";
+    @import "@/styles/icons.scss";
 </style>
